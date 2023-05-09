@@ -25,7 +25,16 @@ export default function AleatoryImage(){
     }
     return (
         <div className="flex flex-col gap-3 border border-zinc-500 p-7 rounded-md">
-            <Image src={`${url}${size}x${size}?${search}`} height={300} width={300} alt="Imagem" />
+            <div className='flex justify-center gap-7 mb-5'>
+                <span>{search}</span>
+                <span>{size}x{size}</span>
+            </div>
+            <Image 
+            src={`${url}${size}x${size}?${search}`} 
+            height={300} 
+            width={300} 
+            alt="Imagem"
+            className='rounded-md' />
             <div className="flex gap-5">
             {renderButton('abstract')}
             {renderButton('city')}
@@ -35,7 +44,7 @@ export default function AleatoryImage(){
                 <input 
                 type="number" 
                 value={size} 
-                className='bg-zinc-800 outline-none'
+                className='bg-zinc-800 outline-none w-full'
                 onChange={e => {
                     setSize(+e.target.value)
                 }} />
