@@ -1,4 +1,5 @@
-import Box from "@/components/basics/box";
+import Box from "@/components/basics/Box";
+
 
 export default function BoxPage() {
     return (
