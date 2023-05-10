@@ -1,4 +1,3 @@
-
 interface IfElseProps{
     teste: boolean
     children: any
