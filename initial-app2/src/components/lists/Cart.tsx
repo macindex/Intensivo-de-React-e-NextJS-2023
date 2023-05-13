@@ -1,4 +1,5 @@
 import ItemCart from "@/model/ItemCart";
+import Coin from "@/utils/Coin";
 import { IconCircleX } from "@tabler/icons-react";
 import { Emblema_One } from "next/font/google";
 import CartItem from "./CartItem";
@@ -14,9 +15,9 @@ export default function Cart(props: CartProps){
  }, 0)
   return (
    <div className="flex flex-col border border-white overflow-hidden w-4/5">
-     <div className="bg-zinc-800 text-3xl p-3">
+     <div className="flex justify-between items-center bg-zinc-800 text-3xl p-3">
       <span>Cart</span>
-      <span>Cart</span>
+      <span>{Coin.format(total)} </span>
       </div>
      <div className="flex gap-5">
       {props.itens.length === 0 ? (

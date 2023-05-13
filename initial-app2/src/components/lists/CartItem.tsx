@@ -1,13 +1,9 @@
 import ItemCart from "@/model/ItemCart";
+import Coin from "@/utils/Coin";
 
 
 export default function CartItem(props: ItemCart){
-  function showLikeCoin(valor: number){
-    return new Intl.NumberFormat('pt-BR', {
-      style: 'currency',
-      currency: 'BRL'
-    }).format(valor)
-  }  
+    
   return (
     <div
       className={`
@@ -18,7 +14,7 @@ export default function CartItem(props: ItemCart){
       </span>
       <span>{props.product.name}</span>
       <span className="pr-5">
-        {showLikeCoin(props.product.price * props.amount)}
+        {Coin.format(props.product.price * props.amount)}
       </span>
     </div>
   );
